@@ -37,6 +37,8 @@ website:
           href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_4.html"
         - text: "Hands-on_Ex05(5). Treemap Visualisation with R"
           href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_5.html"
+        - text: "Hands-on_Ex06. Visualising and Analysing Time-oriented Data"
+          href: "Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06.html"
     - text: "In-class Exercise"
       menu:
         - text: "In-class_Ex01. Importing Data in R"
