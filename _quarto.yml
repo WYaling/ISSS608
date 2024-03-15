@@ -12,7 +12,7 @@ website:
     - text: "Hands-on Exercise"
       menu:
         - text: "Hands-on_Ex01. A Layered Grammar of Graphics: ggplot2 methods"
-#          href: "Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html"
+          href: "Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html"
         - text: "Hands-on_Ex02. Beyond ggplot2 Fundamentals"
 #          href: "Hands-on_Ex/Hands-on_Ex02/Hands-on_Ex02.html"
         - text: "Hands-on_Ex03(1). Programming Interactive Data Visualisation with R"
