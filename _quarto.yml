@@ -71,7 +71,7 @@ website:
         - text: "Take-home_Ex03. Be Weatherwise or Otherwise"
          # href: "Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html" 
         - text: "Take-home_Ex04. Prototype of Group Project"
-         # href: "Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html" 
+          href: "Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html" 
     - text: "Project"
       menu:
         - text: "introduction"
