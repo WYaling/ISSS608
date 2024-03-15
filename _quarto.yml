@@ -67,7 +67,7 @@ website:
         - text: "Take-home_Ex01. Analysis of Singaporean Students’ Performance"
           href: "Take-home_Ex/Take-home_Ex01/Take-home_Ex01.html"
         - text: "Take-home_Ex02. Peer Critique & DataVis Makeover"
-         # href: "Take-home_Ex/Take-home_Ex02/Take-home_Ex02.html"        
+          href: "Take-home_Ex/Take-home_Ex02/Take-home_Ex02.html"        
         - text: "Take-home_Ex03. Be Weatherwise or Otherwise"
          # href: "Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html" 
         - text: "Take-home_Ex04. Prototype of Group Project"
