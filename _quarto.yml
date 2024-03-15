@@ -69,7 +69,7 @@ website:
         - text: "Take-home_Ex02. Peer Critique & DataVis Makeover"
           href: "Take-home_Ex/Take-home_Ex02/Take-home_Ex02.html"        
         - text: "Take-home_Ex03. Be Weatherwise or Otherwise"
-         # href: "Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html" 
+          href: "Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html" 
         - text: "Take-home_Ex04. Prototype of Group Project"
           href: "Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html" 
     - text: "Project"
@@ -98,7 +98,14 @@ website:
     background: secondary 
     foreground: primary
     alignment: left
-    pinned: true     
+    pinned: true
+    contents:
+      - section: "Hands-on Exercise"
+        contents: Hands-on_Ex/*/*.qmd
+      - section: "In-class Exercise"
+        contents: In-class_Ex/*/*.qmd
+      - section: "Take-home Exercise"
+        contents: Take-home_Ex/*/*.qmd    
 
   search: 
     location: sidebar

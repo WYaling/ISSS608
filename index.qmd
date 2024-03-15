@@ -3,7 +3,32 @@ page-layout: article
 sidebar: false
 toc: false
 
-
+listing:
+  - id: Hands-on_Ex
+    contents: "Hands-on_Ex/*/*.qmd"
+    type: grid
+    sort: "date desc"
+    max-items: 6
+    sort-ui: [title, date]
+    filter-ui: [title, date]
+    page-size: 15
+    fields: [image, date, title, reading-time]
+  - id: In-class_Ex
+    contents: "In-class_Ex/*/*.qmd"
+    type: grid
+    sort: "date desc"
+    max-items: 3
+    sort-ui: [title, date]
+    filter-ui: [title, date]
+    fields: [image, date, title, reading-time]
+  - id: Take-home_Ex
+    contents: "Take-home_Ex/*/*.qmd"
+    type: grid
+    sort: "date desc"
+    max-items: 3
+    sort-ui: [title, date]
+    filter-ui: [title, date]
+    fields: [image, date, title, reading-time]
 ---
 
 ::: {style="color:#5DADE2; font-size: 66px; font-family: Georgia Pro Black; text-align:center; text-decoration-thickness: 25%"}
@@ -18,3 +43,17 @@ At present, this website is only for showcasing coursework of **ISSS608 Visual A
 
 ![](images/New_post.gif){fig-align="center" width="355"}
 
+## Hands-on Exercise
+
+::: {#Hands-on_Ex}
+:::
+
+## In-class Exercise
+
+::: {#In-class_Ex}
+:::
+
+## Take-home Exercise
+
+::: {#Take-home_Ex}
+:::

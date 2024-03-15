@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/Web_logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,7 +67,122 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Hands-on_Ex .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 15,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Hands-on_Ex'] = new List('listing-Hands-on_Ex', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-In-class_Ex .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-In-class_Ex'] = new List('listing-In-class_Ex', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Take-home_Ex .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Take-home_Ex'] = new List('listing-Take-home_Ex', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -209,7 +326,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./Take-home_Ex/Take-home_Ex02/Take-home_Ex02.html">
  <span class="dropdown-text">Take-home_Ex02. Peer Critique &amp; DataVis Makeover</span></a>
   </li>  
-        <li class="dropdown-header">Take-home_Ex03. Be Weatherwise or Otherwise</li>
+        <li>
+    <a class="dropdown-item" href="./Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html">
+ <span class="dropdown-text">Take-home_Ex03. Be Weatherwise or Otherwise</span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="./Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html">
  <span class="dropdown-text">Take-home_Ex04. Prototype of Group Project</span></a>
@@ -277,8 +397,345 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/New_post.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="355"></p>
 </figure>
 </div>
+<section id="hands-on-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-exercise">Hands-on Exercise</h2>
+<div id="listing-Hands-on_Ex" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-Hands-on_Ex-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-Hands-on_Ex'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1708358400000" data-listing-file-modified-sort="1710514446427" data-listing-date-modified-sort="1710514446000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2946">
+<a href="./Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Hands-on_Ex\Hands-on_Ex07\Hands-on_Ex07_1_files\figure-html\unnamed-chunk-9-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Choropleth Mapping with R
+</h5>
+<div class="listing-reading-time card-text text-muted">
+15 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1708358400000" data-listing-file-modified-sort="1710514563784" data-listing-date-modified-sort="1710514563000" data-listing-reading-time-sort="5" data-listing-word-count-sort="818">
+<a href="./Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Hands-on_Ex\Hands-on_Ex07\images\image1.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Visualising Geospatial Point Data
+</h5>
+<div class="listing-reading-time card-text text-muted">
+5 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1708358400000" data-listing-file-modified-sort="1708333673710" data-listing-date-modified-sort="1708333673000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1885">
+<a href="./Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_3.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Hands-on_Ex\Hands-on_Ex07\Hands-on_Ex07_3_files\figure-html\unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Analytical Mapping
+</h5>
+<div class="listing-reading-time card-text text-muted">
+10 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-date-sort="1708358400000" data-listing-file-modified-sort="1710514654749" data-listing-date-modified-sort="1710514654000" data-listing-reading-time-sort="18" data-listing-word-count-sort="3599">
+<a href="./Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Hands-on_Ex\Hands-on_Ex08\images\image1.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Modelling, Visualising and Analysing Network Data with R
+</h5>
+<div class="listing-reading-time card-text text-muted">
+18 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-date-sort="1708358400000" data-listing-file-modified-sort="1710517365113" data-listing-date-modified-sort="1710517365000" data-listing-reading-time-sort="13" data-listing-word-count-sort="2532">
+<a href="./Hands-on_Ex/Hands-on_Ex10/Hands-on_Ex10.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Hands-on_Ex\Hands-on_Ex10\Hands-on_Ex10_files\figure-html\unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Information Dashboard Design: R methods
+</h5>
+<div class="listing-reading-time card-text text-muted">
+13 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-date-sort="1708099200000" data-listing-file-modified-sort="1710514380743" data-listing-date-modified-sort="1710514380000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1998">
+<a href="./Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Hands-on_Ex\Hands-on_Ex06\Hands-on_Ex06_files\figure-html\unnamed-chunk-5-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Visualising and Analysing Time-oriented Data
+</h5>
+<div class="listing-reading-time card-text text-muted">
+10 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 17, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="in-class-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-exercise">In-class Exercise</h2>
+<div id="listing-In-class_Ex" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-In-class_Ex-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-In-class_Ex'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1708704000000" data-listing-file-modified-sort="1710517775233" data-listing-date-modified-sort="1710517775000" data-listing-reading-time-sort="1" data-listing-word-count-sort="169">
+<a href="./In-class_Ex/In-class_Ex06/In-class_Ex06.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="In-class_Ex\In-class_Ex06\In-class_Ex06_files\figure-html\unnamed-chunk-3-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Horizon Plot
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 24, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1706284800000" data-listing-file-modified-sort="1710517702706" data-listing-date-modified-sort="1710517702000" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
+<a href="./In-class_Ex/In-class_Ex03/In-class_Ex03.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="In-class_Ex\In-class_Ex03\images\tableau-dashboard.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Tableau02: Make Dashboard &amp; Story
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 27, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1705680000000" data-listing-file-modified-sort="1706799582072" data-listing-date-modified-sort="1706799582000" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<a href="./In-class_Ex/In-class_Ex02/In-class_Ex02.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="In-class_Ex\In-class_Ex02\images\Tableau_logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Tableau01: Make a Chart
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 20, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="take-home-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="take-home-exercise">Take-home Exercise</h2>
+<div id="listing-Take-home_Ex" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-Take-home_Ex-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-Take-home_Ex'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1709308800000" data-listing-file-modified-sort="1710518297023" data-listing-date-modified-sort="1710518297000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3729">
+<a href="./Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Take-home_Ex\Take-home_Ex04\images\Datasets.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Take-home Exercise 4: Prototyping Modules for Visual Analytics Shiny Application
+</h5>
+<div class="listing-reading-time card-text text-muted">
+19 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Mar 2, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1707494400000" data-listing-file-modified-sort="1710518626028" data-listing-date-modified-sort="1710518626000" data-listing-reading-time-sort="32" data-listing-word-count-sort="6333">
+<a href="./Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Take-home_Ex\Take-home_Ex03\images\Weather_in_SG.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Be Weatherwise or Otherwise
+</h5>
+<div class="listing-reading-time card-text text-muted">
+32 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 10, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1706198400000" data-listing-file-modified-sort="1708205190663" data-listing-date-modified-sort="1708205190000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4718">
+<a href="./Take-home_Ex/Take-home_Ex02/Take-home_Ex02.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="Take-home_Ex\Take-home_Ex02\images\Peer_review.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Peer Critique &amp; DataVis Makeover
+</h5>
+<div class="listing-reading-time card-text text-muted">
+24 min
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 26, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
