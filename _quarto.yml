@@ -54,7 +54,7 @@ website:
     - text: "In-class Exercise"
       menu:
         - text: "In-class_Ex01. Importing Data in R"
-         # href: "In-class_Ex/In-class_Ex01/In-class_Ex01.html"
+          href: "In-class_Ex/In-class_Ex01/In-class_Ex01.html"
         - text: "In-class_Ex02. Tableau01: Make a Chart"
          # href: "In-class_Ex/In-class_Ex02/In-class_Ex02.html"
         - text: "In-class_Ex03. Tableau02: Make Dashboard & Story"

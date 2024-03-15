@@ -1622,5 +1622,19 @@
     "title": "Information Dashboard Design: R methods",
     "section": "7.6 Changing from sparkline to sparkbar",
     "text": "7.6 Changing from sparkline to sparkbar\nInstead of displaying the values as sparklines, we can display them as sparkbars as shiwn below.\n\nreactable(\n  report,\n  defaultPageSize = 13,\n  columns = list(\n    Product = colDef(maxWidth = 200),\n    `Monthly Sales` = colDef(\n      cell = react_sparkbar(\n        report,\n        highlight_bars = highlight_bars(\n          min = \"red\", max = \"blue\"),\n        bandline = \"innerquartiles\",\n        statline = \"mean\")\n    )\n  )\n)"
+  },
+  {
+    "objectID": "In-class_Ex/In-class_Ex01/In-class_Ex01.html#loading-r-packages",
+    "href": "In-class_Ex/In-class_Ex01/In-class_Ex01.html#loading-r-packages",
+    "title": "Importing Data in R",
+    "section": "Loading R packages",
+    "text": "Loading R packages\nIn this hands-on exercise, two R packages will be used. They are: tidyverse, and haven.\nThe code chunk used is as follows:\n\npacman::p_load(tidyverse,haven)"
+  },
+  {
+    "objectID": "In-class_Ex/In-class_Ex01/In-class_Ex01.html#importing-pisa-data",
+    "href": "In-class_Ex/In-class_Ex01/In-class_Ex01.html#importing-pisa-data",
+    "title": "Importing Data in R",
+    "section": "Importing PISA data",
+    "text": "Importing PISA data\nThe code chunk below uses read_sas() of haven to import PISA data (Student questionnaire data file) into environment.\n\nstu_qqq&lt;- read_sas(\"data/cy08msp_stu_qqq.sas7bdat\")\n\nFilter the table using filter()\n\nstu_qqq_SG &lt;- stu_qqq %&gt;% filter(CNT == \"SGP\")\n\nWrite records into the data file.\n\nwrite_rds(stu_qqq_SG, \"data/stu_qqq_SG.rds\")\n\nRead data file.\n\nstu_qqq_SG &lt;- read_rds(\"data/stu_qqq_SG.rds\")"
   }
 ]
