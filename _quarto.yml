@@ -47,6 +47,8 @@ website:
           href: "Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_3.html" 
         - text: "Hands-on_Ex08. Network Data Visualisation and Analysis"
           href: "Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.html"
+        - text: "Hands-on_Ex09. Network Data Visualisation and Analysis"
+          href: "Hands-on_Ex/Hands-on_Ex09/Hands-on_Ex09.html"
     - text: "In-class Exercise"
       menu:
         - text: "In-class_Ex01. Importing Data in R"
