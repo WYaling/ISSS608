@@ -1,0 +1,136 @@
+project:
+  type: website
+
+website:
+  favicon: "images/Web_logo.png"
+  title: "Yaling's VAA journey"
+  navbar:
+    title: false
+    logo: "images/Name_logo.png"
+    pinned: true
+    left:
+    - text: "Hands-on Exercise"
+      menu:
+        - text: "Hands-on_Ex01. A Layered Grammar of Graphics: ggplot2 methods"
+#          href: "Hands-on_Ex/Hands-on_Ex01/Hands-on_Ex01.html"
+        - text: "Hands-on_Ex02. Beyond ggplot2 Fundamentals"
+#          href: "Hands-on_Ex/Hands-on_Ex02/Hands-on_Ex02.html"
+        - text: "Hands-on_Ex03(1). Programming Interactive Data Visualisation with R"
+#          href: "Hands-on_Ex/Hands-on_Ex03/Hands-on_Ex03(1).html"
+        - text: "Hands-on_Ex03(2). Programming Animated Statistical Graphics with R"
+#          href: "Hands-on_Ex/Hands-on_Ex03/Hands-on_Ex03(2).html"
+        - text: "Hands-on_Ex04(1). Visualising Distribution: Ridgeline Plot & Raincloud Plot"
+#          href: "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04(1).html"
+        - text: "Hands-on_Ex04(2). Visual Statistical Analysis: add statistical information in chart"
+#          href: "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04(2).html"
+        - text: "Hands-on_Ex04(3). Visualising Uncertainty"
+#          href: "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04(3).html"
+        - text: "Hands-on_Ex04(4). Funnel Plots for Fair Comparisons"
+#          href: "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04(4).html"
+        - text: "Hands-on_Ex05(1). Creating Ternary Plot with R"
+#          href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_1.html"
+        - text: "Hands-on_Ex05(2). Visual Correlation Analysis"
+#          href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_2.html"
+        - text: "Hands-on_Ex05(3). Heatmap for Visualising and Analysing Multivariate Data"
+#          href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_3.html"
+        - text: "Hands-on_Ex05(4). Visual Multivariate Analysis with Parallel Coordinates Plot"
+#          href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_4.html"
+        - text: "Hands-on_Ex05(5). Treemap Visualisation with R"
+#          href: "Hands-on_Ex/Hands-on_Ex05/Hands-on_Ex05_5.html"
+        - text: "Hands-on_Ex06. Visualising and Analysing Time-oriented Data"
+#         href: "Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06.html"          
+        - text: "Hands-on_Ex07(1). Choropleth Mapping with R"
+#          href: "Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_1.html"
+        - text: "Hands-on_Ex07(2). Visualising Geospatial Point Data"
+#          href: "Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_2.html"          
+        - text: "Hands-on_Ex07(3). Analytical Mapping"
+#          href: "Hands-on_Ex/Hands-on_Ex07/Hands-on_Ex07_3.html"          
+        - text: "Hands-on_Ex08. Network Data Visualisation and Analysis"
+#          href: "Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.html"          
+        - text: "Hands-on_Ex09. Visualising and Analysing Text Data"
+#          href: "Hands-on_Ex/Hands-on_Ex09/Hands-on_Ex09.html"            
+#       - text: "Hands-on_Ex10. Information Dashboard Design"
+#          href: "Hands-on_Ex/Hands-on_Ex10/Hands-on_Ex10.html"  
+          
+    - text: "In-class Exercise"
+      menu:
+        - text: "In-class_Ex01. Importing Data in R"
+         # href: "In-class_Ex/In-class_Ex01/In-class_Ex01.html"
+        - text: "In-class_Ex02. Tableau01: Make a Chart"
+         # href: "In-class_Ex/In-class_Ex02/In-class_Ex02.html"
+        - text: "In-class_Ex03. Tableau02: Make Dashboard & Story"
+         # href: "In-class_Ex/In-class_Ex03/In-class_Ex03.html"
+        - text: "In-class_Ex06. In-class_Ex06"
+         # href: "In-class_Ex/In-class_Ex06/In-class_Ex06.html"
+          
+    - text: "Take-home Exercise"
+      menu:
+        - text: "Take-home_Ex01. Analysis of Singaporean Students’ Performance"
+       #   href: "Take-home_Ex/Take-home_Ex01/Take-home_Ex01.html"
+        - text: "Take-home_Ex02. Peer Critique & DataVis Makeover"
+         # href: "Take-home_Ex/Take-home_Ex02/Take-home_Ex02.html"        
+        - text: "Take-home_Ex03. Be Weatherwise or Otherwise"
+         # href: "Take-home_Ex/Take-home_Ex03/Take-home_Ex03.html" 
+        - text: "Take-home_Ex04. Prototype of Group Project"
+         # href: "Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html" 
+    - text: "Project"
+      menu:
+        - text: "introduction"
+        
+    right:
+      - icon: house
+        text: " "
+        href: index.qmd
+      - icon: linkedin
+        #href:
+      - icon: envelope-at
+        href: https://mail.google.com/mail/u/0/?view=cm&fs=1&to=yalingsayhi@gmail.com
+      - icon: github
+        #href:
+        menu:
+          - text: Source Code
+          - text: Report a bug
+          
+
+  sidebar:
+    location: sidebar
+    style: "docked"
+    search: true
+    background: secondary 
+    foreground: primary
+    alignment: left
+    pinned: true     
+
+  search: 
+    location: sidebar
+    type: overlay
+    copy-button: true
+
+  page-navigation: true
+  back-to-top-navigation: true
+  page-footer: 
+    border: true
+    right: Copyright 2024![](images/Name_logo(1).png){width=100px}
+
+
+format:
+  html:
+    toc: true
+    theme: cerulean
+    mainfont: Times New Roman
+    fontsize: 1.2 em
+    linestretch: 1.5
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 300px
+      gutter-width: 1.5rem
+    css: styles.css
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    code-line-numbers: true
+
+editor: visual
+
+
+
