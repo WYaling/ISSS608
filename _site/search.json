@@ -292,5 +292,61 @@
     "title": "Visualising Distribution: Ridgeline Plot & Raincloud Plot",
     "section": "3.2 Design the raincload plot",
     "text": "3.2 Design the raincload plot\nFlip the raincloud chart and apply another theme to make the raincloud plot more beautiful.\n\n\nShow the code: filp the chart and apply theme\nggplot(exam, \n       aes(x = RACE, \n           y = ENGLISH)) +\n  stat_halfeye(adjust = 0.5,\n               justification = -0.2,\n               .width = 0,\n               point_colour = NA) +\n  geom_boxplot(width = .20,\n               outlier.shape = NA) +\n  stat_dots(side = \"left\", \n            justification = 1.2, \n            binwidth = .5,\n            dotsize = 1.5) +\n  coord_flip() +\n  theme_economist()"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "",
+    "text": "In this hands-on exercise, you will gain hands-on experience on using:\n\nggstatsplot package to create visual graphics with rich statistical information,\nperformance package to visualise model diagnostics, and\nparameters package to visualise model parameters"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#one-sample-test-gghistostats",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#one-sample-test-gghistostats",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "2.1 One-sample test: gghistostats()",
+    "text": "2.1 One-sample test: gghistostats()\n\n\nShow the code: One-sample test(gghistostats)\nset.seed(1234)  \n\n#Setting a seed ensures that the same random numbers are generated each time the code is run, aiding in achieving result reproducibility\n\ngghistostats(\n  data = exam,\n  x = ENGLISH,\n  type = \"bayes\",\n  test.value = 60,\n  xlab = \"English scores\"\n)\n\n\n\n\n\n\n\n\n\n\nUnpacking the Bayes Factor:\nIn this hands-on exercise, you will gain hands-on experience on using:\n\nggstatsplot package to create visual graphics with rich statistical information,\nperformance package to visualise model diagnostics, and\nparameters package to visualise model parameters\n\nHow to interpret Bayes Factor:\nA Bayes Factor can be any positive number. One of the most common interpretations is this one—first proposed by Harold Jeffereys (1961) and slightly modified by Lee and Wagenmakers in 2013."
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#two-sample-mean-test-ggbetweenstats",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#two-sample-mean-test-ggbetweenstats",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "2.2 Two-sample mean test: ggbetweenstats()",
+    "text": "2.2 Two-sample mean test: ggbetweenstats()\n\n\nShow the code: Two-sample mean test(ggbetweenstats)\nggbetweenstats(\n  data = exam,\n  x = GENDER, \n  y = MATHS,\n  type = \"np\",\n  messages = FALSE\n)"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#oneway-anova-test-ggbetweenstats",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#oneway-anova-test-ggbetweenstats",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "2.3 Oneway ANOVA Test: ggbetweenstats()",
+    "text": "2.3 Oneway ANOVA Test: ggbetweenstats()\n\n\nShow the code: Oneway ANOVA Test(ggbetweenstats)\nggbetweenstats(\n  data = exam,\n  x = RACE, \n  y = ENGLISH,\n  type = \"p\",\n  mean.ci = TRUE, \n  pairwise.comparisons = TRUE, \n  pairwise.display = \"s\",\n  p.adjust.method = \"fdr\",\n  messages = FALSE\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n“ns” → only non-significant\n“s” → only significant\n“all” → everything"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#significant-test-of-correlation-ggscatterstats",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#significant-test-of-correlation-ggscatterstats",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "2.4 Significant Test of Correlation: ggscatterstats()",
+    "text": "2.4 Significant Test of Correlation: ggscatterstats()\n\n\nShow the code: Significant Test of Correlation(ggscatterstats)\nggscatterstats(\n  data = exam,\n  x = MATHS,\n  y = ENGLISH,\n  marginal = FALSE,\n  )"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#significant-test-of-association-depedence-ggbarstats",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#significant-test-of-association-depedence-ggbarstats",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "2.5 Significant Test of Association (Depedence) : ggbarstats",
+    "text": "2.5 Significant Test of Association (Depedence) : ggbarstats\n\n\nShow the code: Significant Test of Association (Depedence) : (ggbarstats)\nexam1 &lt;- exam %&gt;% \n  mutate(MATHS_bins = \n           cut(MATHS, \n               breaks = c(0,60,75,85,100))\n)\nggbarstats(exam1, \n           x = MATHS_bins, \n           y = GENDER)"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#getting-started-1",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#getting-started-1",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "3.1 Getting started",
+    "text": "3.1 Getting started\n\n\nShow the code: Load R packages\npacman::p_load(readxl, performance, parameters, see)\n\n\n\n\nShow the code: Import data\ncar_resale &lt;- read_xls(\"data/ToyotaCorolla.xls\", \n                       \"data\")\ncar_resale\n\n\n# A tibble: 1,436 × 38\n      Id Model    Price Age_08_04 Mfg_Month Mfg_Year     KM Quarterly_Tax Weight\n   &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;         &lt;dbl&gt;  &lt;dbl&gt;\n 1    81 TOYOTA … 18950        25         8     2002  20019           100   1180\n 2     1 TOYOTA … 13500        23        10     2002  46986           210   1165\n 3     2 TOYOTA … 13750        23        10     2002  72937           210   1165\n 4     3  TOYOTA… 13950        24         9     2002  41711           210   1165\n 5     4 TOYOTA … 14950        26         7     2002  48000           210   1165\n 6     5 TOYOTA … 13750        30         3     2002  38500           210   1170\n 7     6 TOYOTA … 12950        32         1     2002  61000           210   1170\n 8     7  TOYOTA… 16900        27         6     2002  94612           210   1245\n 9     8 TOYOTA … 18600        30         3     2002  75889           210   1245\n10    44 TOYOTA … 16950        27         6     2002 110404           234   1255\n# ℹ 1,426 more rows\n# ℹ 29 more variables: Guarantee_Period &lt;dbl&gt;, HP_Bin &lt;chr&gt;, CC_bin &lt;chr&gt;,\n#   Doors &lt;dbl&gt;, Gears &lt;dbl&gt;, Cylinders &lt;dbl&gt;, Fuel_Type &lt;chr&gt;, Color &lt;chr&gt;,\n#   Met_Color &lt;dbl&gt;, Automatic &lt;dbl&gt;, Mfr_Guarantee &lt;dbl&gt;,\n#   BOVAG_Guarantee &lt;dbl&gt;, ABS &lt;dbl&gt;, Airbag_1 &lt;dbl&gt;, Airbag_2 &lt;dbl&gt;,\n#   Airco &lt;dbl&gt;, Automatic_airco &lt;dbl&gt;, Boardcomputer &lt;dbl&gt;, CD_Player &lt;dbl&gt;,\n#   Central_Lock &lt;dbl&gt;, Powered_Windows &lt;dbl&gt;, Power_Steering &lt;dbl&gt;, …\n\n\nNotice that the output object car_resale is a tibble data frame."
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#build-models",
+    "href": "Hands-on_Ex/Hands-on_Ex04/Hands-on_Ex04_2.html#build-models",
+    "title": "Visual Statistical Analysis: add statistical information in chart",
+    "section": "3.2 Build models",
+    "text": "3.2 Build models\n\n\nShow the code: Multiple Regression Model\nmodel &lt;- lm(Price ~ Age_08_04 + Mfg_Year + KM + \n              Weight + Guarantee_Period, data = car_resale)\nmodel\n\n\n\nCall:\nlm(formula = Price ~ Age_08_04 + Mfg_Year + KM + Weight + Guarantee_Period, \n    data = car_resale)\n\nCoefficients:\n     (Intercept)         Age_08_04          Mfg_Year                KM  \n      -2.637e+06        -1.409e+01         1.315e+03        -2.323e-02  \n          Weight  Guarantee_Period  \n       1.903e+01         2.770e+01  \n\n\n\n\nShow the code: Model Diagnostic: checking for multicolinearity\ncheck_collinearity(model)\n\n\n# Check for Multicollinearity\n\nLow Correlation\n\n             Term  VIF     VIF 95% CI Increased SE Tolerance Tolerance 95% CI\n               KM 1.46 [ 1.37,  1.57]         1.21      0.68     [0.64, 0.73]\n           Weight 1.41 [ 1.32,  1.51]         1.19      0.71     [0.66, 0.76]\n Guarantee_Period 1.04 [ 1.01,  1.17]         1.02      0.97     [0.86, 0.99]\n\nHigh Correlation\n\n      Term   VIF     VIF 95% CI Increased SE Tolerance Tolerance 95% CI\n Age_08_04 31.07 [28.08, 34.38]         5.57      0.03     [0.03, 0.04]\n  Mfg_Year 31.16 [28.16, 34.48]         5.58      0.03     [0.03, 0.04]\n\n\n\n\nShow the code: Model Diagnostic: checking for multicolinearity\ncheck_c &lt;- check_collinearity(model)\nplot(check_c)\n\n\nVariable `Component` is not in your data frame :/\n\n\n\n\n\n\n\n\n\n\n\nShow the code: Model Diagnostic: checking normality assumption\nmodel1 &lt;- lm(Price ~ Age_08_04 + KM + \n              Weight + Guarantee_Period, data = car_resale)\ncheck_n &lt;- check_normality(model1)\nplot(check_n)\n\n\nFor confidence bands, please install `qqplotr`.\n\n\n\n\n\n\n\n\n\n\n\nShow the code: Model Diagnostic: Check model for homogeneity of variances\ncheck_h &lt;- check_heteroscedasticity(model1)\nplot(check_h)\n\n\n\n\n\n\n\n\n\n\n\nShow the code: Model Diagnostic: Complete check\ncheck_model(model1)\nggsave(\"images/ModelDiagnosticCompleteCheck.jpg\", width = 30, height = 30, units = \"cm\")\n\n\n\n\n\n\n\n\n\nShow the code: Visualising Regression Parameters: see methods\nplot(parameters(model1))\n\n\n\n\n\n\n\n\n\n\n\nShow the code: Visualising Regression Parameters: ggcoefstats()\nggcoefstats(model1, \n            output = \"plot\")"
   }
 ]
