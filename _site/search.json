@@ -1636,5 +1636,12 @@
     "title": "Importing Data in R",
     "section": "Importing PISA data",
     "text": "Importing PISA data\nThe code chunk below uses read_sas() of haven to import PISA data (Student questionnaire data file) into environment.\n\nstu_qqq&lt;- read_sas(\"data/cy08msp_stu_qqq.sas7bdat\")\n\nFilter the table using filter()\n\nstu_qqq_SG &lt;- stu_qqq %&gt;% filter(CNT == \"SGP\")\n\nWrite records into the data file.\n\nwrite_rds(stu_qqq_SG, \"data/stu_qqq_SG.rds\")\n\nRead data file.\n\nstu_qqq_SG &lt;- read_rds(\"data/stu_qqq_SG.rds\")"
+  },
+  {
+    "objectID": "In-class_Ex/In-class_Ex02/In-class_Ex02.html",
+    "href": "In-class_Ex/In-class_Ex02/In-class_Ex02.html",
+    "title": "Tableau01: Make a Chart",
+    "section": "",
+    "text": "Exercise: Make a chart in tableau\nTableau Practice of Lesson 2\n\n\n\n Back to top"
   }
 ]

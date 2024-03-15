@@ -1,0 +1,19 @@
+---
+title: "Tableau01: Make a Chart"
+title-block-banner: true
+author: "Wang Yaling"
+date: "Jan 20, 2024"
+date-modified: last-modified
+date-format: medium
+excute:
+  eval: true
+  echo: true
+  warning: false
+editor: visual
+---
+
+![](images/Tableau_logo.png){fig-align="center" width="323"}
+
+Exercise: Make a chart in tableau
+
+[Tableau Practice of Lesson 2](https://public.tableau.com/app/profile/yaling.wang1911/viz/In-class_Ex02_17063381054460/MonthlySalesProfitbyRegion2016-2019)
