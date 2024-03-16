@@ -1,0 +1,125 @@
+---
+title: "In-class Exercise 09"
+date: Mar 16, 2024
+date-modified: "last-modified"
+execute: 
+  eval: true
+  echo: true
+  freeze: false
+  message: false
+  warning: false
+---
+
+# 1. Prepare the data
+
+```{r}
+pacman::p_load(igraph, tidygraph, ggraph, 
+               visNetwork, lubridate, clock,
+               tidyverse, graphlayouts)
+```
+
+```{r}
+GAStech_nodes <- read_csv("data/GAStech_email_node.csv")
+GAStech_edges <- read_csv("data/GAStech_email_edge-v2.csv")
+
+```
+
+```{r}
+GAStech_edges <- GAStech_edges %>%
+  mutate(SendDate = dmy(SentDate)) %>%
+  mutate(Weekday = wday(SentDate,
+                        label = TRUE,
+                        abbr = FALSE))
+```
+
+```{r}
+GAStech_edges_aggregated <- GAStech_edges %>%
+  filter(MainSubject == "Work related") %>%
+  group_by(source, target, Weekday) %>%
+    summarise(Weight = n(), .groups = 'drop') %>%
+  filter(source != target) %>%
+  filter(Weight > 1) %>%
+  ungroup()
+```
+
+# 2. Using `tbl_graph()` to build tidygraph data model.
+
+In this section, you will use `tbl_graph()` of **tinygraph** package to build an tidygraph’s network graph data.frame.
+
+Before typing the codes, you are recommended to review to reference guide of [`tbl_graph()`](https://tidygraph.data-imaginist.com/reference/tbl_graph.html)
+
+```{r}
+GAStech_graph <- tbl_graph(nodes = GAStech_nodes,
+                           edges = GAStech_edges_aggregated, 
+                           directed = TRUE)
+```
+
+```{r}
+GAStech_graph
+```
+
+# 3. Plotting a basic network graph
+
+```{r}
+ggraph(GAStech_graph) +
+  geom_edge_link() +
+  geom_node_point()
+
+```
+
+# **4. Changing the default network graph theme**
+
+In this section, you will use [*theme_graph()*](https://ggraph.data-imaginist.com/reference/theme_graph.html) to remove the x and y axes. Before your get started, it is advisable to read it’s reference guide at least once.
+
+```{r}
+g <- ggraph(GAStech_graph,
+            layout='nicely') + 
+  geom_edge_link(aes())+
+  geom_node_point(aes(color=Department), size=3)
+g + theme_graph()
+```
+
+```{r}
+#| warning: false
+
+set_graph_style()
+
+g <- ggraph(GAStech_graph,
+            layout='nicely') + 
+  geom_edge_link(aes(width=Weight),
+                 alpha=0.2) +
+  scale_edge_width(range=c(0.1,5))+
+  geom_node_point(aes(color=Department), 
+                    size=3)
+g + theme_graph()
+```
+```{r}
+#| warning: false
+
+set_graph_style()
+
+g <- ggraph(GAStech_graph, 
+            layout = "nicely") + 
+  geom_edge_link(aes(width=Weight), 
+                 alpha=0.2) +
+  scale_edge_width(range = c(0.1, 5)) +
+  geom_node_point(aes(colour = Department), 
+                  size = 2)
+
+g + facet_edges(~Weekday)
+
+```
+
+```{r}
+#| warning: false
+g <- GAStech_graph %>%
+  mutate(betweenness_centrality = centrality_betweenness()) %>%
+  ggraph(layout = "fr") + 
+  geom_edge_link(aes(width=Weight), 
+                 alpha=0.2) +
+  scale_edge_width(range = c(0.1, 5)) +
+  geom_node_point(aes(colour = Department,
+            size=betweenness_centrality))
+g + theme_graph()
+
+```
