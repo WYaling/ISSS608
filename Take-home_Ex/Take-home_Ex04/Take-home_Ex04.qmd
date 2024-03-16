@@ -5,6 +5,7 @@ author: "Wang Yaling"
 date: "Mar 2, 2024"
 date-modified: last-modified
 date-format: medium
+sidebar: TRUE
 execute: 
   warning: false
 ---
@@ -67,7 +68,6 @@ Now, I will introduce the definitions of each variable to facilitate your unders
 
         -   Bivariate analysis: aiming to assist users to understand the driving factors of the resale price through visualizations.
     -   Clustering
-    -   Prediction of Resale Price
 2.  This report will offer UI design for each section in the Shiny App.
 :::
 

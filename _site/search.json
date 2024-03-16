@@ -1766,7 +1766,7 @@
     "href": "Take-home_Ex/Take-home_Ex04/Take-home_Ex04.html#objective-of-the-report",
     "title": "Take-home Exercise 4: Prototyping Modules for Visual Analytics Shiny Application",
     "section": "1.2 Objective of The Report",
-    "text": "1.2 Objective of The Report\n\n\nThis report will provide a detailed exposition of the following sections of the group project:\n\nExploratory Data Analysis\n\nUnivariate analysis: aiming to assist users to understand the quantity and distribution of resale HDB properties through different variable.\nBivariate analysis: aiming to assist users to understand the driving factors of the resale price through visualizations.\n\nClustering\nPrediction of Resale Price\n\nThis report will offer UI design for each section in the Shiny App.",
+    "text": "1.2 Objective of The Report\n\n\nThis report will provide a detailed exposition of the following sections of the group project:\n\nExploratory Data Analysis\n\nUnivariate analysis: aiming to assist users to understand the quantity and distribution of resale HDB properties through different variable.\nBivariate analysis: aiming to assist users to understand the driving factors of the resale price through visualizations.\n\nClustering\n\nThis report will offer UI design for each section in the Shiny App.",
     "crumbs": [
       " ",
       "Take-home Exercise",
